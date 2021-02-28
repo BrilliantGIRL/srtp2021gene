@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cornsilk;
+    margin: 0;
+}
+
+.header{
+    background-color: rgb(4, 48, 113);
+    color:cornsilk;
+    text-align: left;
+    padding: 20px;
+    /*padding-left: 40px*/;
+}
+
+/*导航条*/
+.topnav{
+    overflow:auto;
+    background-color:rgb(2, 29, 70);
+    /*padding-left: 14px;*/
+}
+
+.topnav a{
+    float:left;
+    display:block;
+    color:cornsilk;
+    text-align:center;
+    padding:14px 26px;
+    text-decoration:none;
+}
+
+.topnav a:hover{
+    background-color:rgb(134, 158, 192);
+    color:rgb(253, 215, 63);
+    /*opacity:0.6;*/
+}
+
+/*创建两个列*/
+.column{
+    float:left;
+    /*padding:20px;*/
+}
+
+.column.main{
+    width:76%;
+    padding:3%;
+}
+.column.side{
+    width:15%;
+    padding:3%;
+    padding-left: 0%;
+}
+
+/*列后面消除浮动*/
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/*响应式布局*/
+@media screen and (max-width:600px){
+    .column{
+        width:100%;
+    }
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    position:fixed;
+    padding-top:40px;
+}
+
+.btn-group button{
+    background-color:rgb(4, 48, 113);
+    color:cornsilk;
+    /*margin*/
+    border:10px solid;
+    padding:10px 24px;
+    cursor:pointer;
+    width:100%;
+    font-size: large;
+}
+
+/*.btn-group button:not(:last-child){
+    border-bottom:none;
+}*/
+
+.btn-group button:hover{
+    opacity:0.6;
+}
+
+.footer{
+    background-color: rgb(4, 48, 113);
+    color:cornsilk;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a{
+    color:cornsilk;
+}
+
+.footer a:hover{
+    color:rgb(253, 215, 63);
+}
